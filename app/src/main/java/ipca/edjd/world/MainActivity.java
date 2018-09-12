@@ -1,7 +1,7 @@
 package ipca.edjd.world;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -11,15 +11,15 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     //just making sure this is working
     int count = 0;
-    int testeVAr = 20;
+    boolean tradutor = true;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         final TextView textv = new TextView(this);
-        textv.setText("hello there");
+        textv.setText("hello there:");
 
 
         Button btn = new Button(this);
@@ -27,8 +27,15 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count++;
-                textv.setText("olá mundo: "+ count);
+                if (tradutor) {
+                    count++;
+                    textv.setText("olá mundo: " + count);
+                    tradutor = false;
+                } else {
+                    count++;
+                    textv.setText("hello there: " + count);
+                    tradutor = true;
+                }
             }
         });
 
