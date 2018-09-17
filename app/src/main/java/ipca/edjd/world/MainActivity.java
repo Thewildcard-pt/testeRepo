@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 //android check
 public class MainActivity extends AppCompatActivity {
-    //just making sure this is working
+    //just making sure this is working v2 plz plz plz plz
     int count = 0, android;
     boolean tradutor = true;
 
