@@ -7,10 +7,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
+//android check
 public class MainActivity extends AppCompatActivity {
     //just making sure this is working
-    int count = 0;
+    int count = 0, android;
     boolean tradutor = true;
 
     @Override
